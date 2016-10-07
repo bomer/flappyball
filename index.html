@@ -96,7 +96,7 @@ function updateGame(){
 	player.xspeed*=friction;
 
 	//floor
-	if (player.y>=height - 150){
+	if (player.y>=height - 150 || player.y<=-150){
 		player.dead=true;
 	}
 
@@ -143,6 +143,7 @@ init();
 
 canvas.addEventListener("click", function(){
 	player.yspeed = -10;
+	console.log("click");
 });
  
 var keys = [];
