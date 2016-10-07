@@ -140,6 +140,10 @@ function updateGame(){
 }
 
 init();
+
+canvas.addEventListener("click", function(){
+	player.yspeed = -10;
+});
  
 var keys = [];
 window.onkeyup = function(e) {keys[e.keyCode]=false;}
